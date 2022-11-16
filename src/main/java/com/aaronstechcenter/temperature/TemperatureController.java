@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TemperatureController {
 
+	record Temperature (double celcius, double fahrenheit) {}
+	
 	@GetMapping("/fahrenheit/from/{tempInCelcius}")
 	public ResponseEntity<Temperature> getFahrenheit(HttpServletRequest req, @PathVariable(value="tempInCelcius") double tempInCelcius) {
 		double tempInFahrenheit = TemperatureLogic.computeFahrenheit(tempInCelcius);
