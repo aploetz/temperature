@@ -2,7 +2,7 @@
 Simple temperature rest API using Spring Boot
 
 ## Prerequisites:
-Java 11 or higher
+Java 17 or higher
 
 ## Build instructions:
 Clone this repo, and build with Maven:
